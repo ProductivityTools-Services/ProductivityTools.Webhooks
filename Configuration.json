@@ -1,0 +1,8 @@
+[
+    {
+        "RepositoryName": "ProductivityTools-Transfers/ProductivityTools.Transfers.Api",
+        "Webhooks": [
+            "http://xjenkinswebhook2.productivitytytools.top","http://xjenkinswebhook1.productivitytytools.top"
+        ]
+    }
+]
