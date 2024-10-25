@@ -29,25 +29,44 @@ function GetConfiguration {
 function DeleteWebHook {
 
     param(
-        [string]$WebhookUrl
+        $Webhook
     )
+    $id=$Webhook.id
+    $hookIdUrl="repos/ProductivityTools-Transfers/ProductivityTools.Transfers.Api/hooks/$id"
+    gh api $hookIdUrl  -X DELETE
     
-    gh api repos/ProductivityTools-Transfers/ProductivityTools.Transfers.Api/hooks --input - -X POST
-
-    Write-Output "Removing webhook $WebhookUrl"
+    Write-Output "Webhook $($Webhook.Url) removed"
+   
 }
 function DeleteWebHooks {
     param(
         [string]$FullRepositoryName
     )
-    $webhooksUrls = GetWebhooks -FullRepositoryName $FullRepositoryName
+    $webhooks = GetWebhooks -FullRepositoryName $FullRepositoryName
     foreach ($webhook in $webhooks) {
-        DeleteWebHook -WebhookUrl $webhookUrl
+        DeleteWebHook -Webhook $webhook
     }
 }
 
-function AddMissingWebhooks {
+function AddWebhook{
+    param(
+        $repositoryName,
+        $webHookUrl
+    )
 
+    #$hooksUrl="repos/ProductivityTools-Transfers/ProductivityTools.Transfers.Api/hooks"
+    $hooksUrl="repos/${$repositoryName}/hooks"
+    echo '{"name":"web","active":true,"events":["push","pull_request","release"],"config":{"url":"$webHookUrl","content_type":"form","insecure_ssl":"0"}}'
+    #echo '{"name":"web","active":true,"events":["push","pull_request","release"],"config":{"url":"$webHookUrl","content_type":"form","insecure_ssl":"0"}}' | gh api $hooksUrl  --input - -X POST
+
+}
+function AddWebhooks {
+    param(
+        $repository
+    )
+    foreach ($webhook in $repository.WebHooks) {
+        AddWebhook -repositoryName $repository.RepositoryName -webHookUrl $webhook
+    }
 }
 
 function Main {
@@ -55,6 +74,7 @@ function Main {
     $config = GetConfiguration -FileName "Configuration.json"
     foreach ($repository in $config) {
         DeleteWebHooks($repository.RepositoryName)
+        AddWebhooks($repository)
         #Write-Output $repository.RepositoryName;
         # Write-Output $repository.WebHooks
     }
