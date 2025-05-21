@@ -2,7 +2,13 @@
     {
         "RepositoryName": "ProductivityTools-Transfers/ProductivityTools.Transfers.Api",
         "Webhooks": [
-            "http://xjenkinswebhook2.productivitytytools.top","http://xjenkinswebhook1.productivitytytools.top"
+            "http://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
+        ]
+    },
+	    {
+        "RepositoryName": "ProductivityTools-Salaries/ProductivityTools.Salaries.Api",
+        "Webhooks": [
+            "http://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
         ]
     }
 ]
