@@ -11,3 +11,14 @@ echo '{"name":"web","active":true,"events":["push","pull_request","release"],"co
 
 [documentation](https://cli.github.com/manual/gh_api)
 [stackoverflow](https://stackoverflow.com/questions/75794370/create-a-github-webhook-using-the-github-cli)
+
+
+Import-Module .\Productivitytools.WebHooks.psm1 -Force
+
+```
+Get-WebhooksUrls ProductivityTools-Transfers/ProductivityTools.Transfers.Api
+Get-WebhooksUrls ProductivityTools-Salaries/ProductivityTools.Salaries.Api
+Get-AllWebhooksDefinedInConfigurationFile
+Set-WebhooksAsInConfigurationFile
+
+```
