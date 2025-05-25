@@ -52,7 +52,7 @@ pipeline {
                     # Write-Output $repository.WebHooks
                 }
 
-                #SetConfiguration  
+                SetConfiguration  
                   
                 ''')
             }

@@ -69,6 +69,10 @@ function AddWebhooks {
         $repository
     )
     foreach ($webhook in $repository.WebHooks) {
+        Write-Host "Adding webhook for"
+        Write-host  $repository.RepositoryName
+        Write-Host "Webhook url"
+        Write-Host $webhook
         AddWebhook -repositoryName $repository.RepositoryName -webHookUrl $webhook
     }
 }
