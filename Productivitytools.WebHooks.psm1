@@ -60,6 +60,7 @@ function AddWebhook{
     $hooksUrl="repos/$repositoryName/hooks"
     $jsonPayload='{"name":"web","active":true,"events":["push","pull_request","release"],"config":{"url":"'+$webHookUrl+'","content_type":"form","insecure_ssl":"0"}}'
     #echo $jsonPayload
+    Write-Host $jsonPayload
     $x=$(echo $jsonPayload | gh api $hooksUrl  --input - -X POST)
     Write-Output "Webhook $hooksUrl added"
 
