@@ -27,7 +27,7 @@ pipeline {
             steps {
                 powershell('''
                 function SetConfiguration(){
-					Import-Module .\Productivitytools.WebHooks.psm1 -Force
+					Import-Module .\\Productivitytools.WebHooks.psm1 -Force
 					Set-WebhooksAsInConfigurationFile
 
                 }
