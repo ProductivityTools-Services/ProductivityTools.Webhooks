@@ -45,6 +45,8 @@ pipeline {
                 echo $env:GITHUB_TOKEN
 
                 $config = GetConfiguration -FileName "Configuration.json"
+                write-host "xxxx"
+                write-host $config  
                 foreach ($repository in $config) {
                     Write-Host $repository.RepositoryName;
                     # Write-Output $repository.WebHooks
