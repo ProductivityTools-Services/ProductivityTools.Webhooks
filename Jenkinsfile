@@ -34,6 +34,7 @@ pipeline {
                 }
                 dir env:  
                 $(dir env:Path).Value
+                $env:Path = 'C:\\Program Files\\GitHub CLI\\;;' + $env:Path
                 SetConfiguration   
                   
                 ''')
