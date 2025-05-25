@@ -27,13 +27,13 @@ pipeline {
             steps {
                 powershell('''
                 function SetConfiguration(){
-                    . C:\\Users\\pawel\\Documents\\\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1
 					Import-Module .\\Productivitytools.WebHooks.psm1 -Force
 					Set-WebhooksAsInConfigurationFile
 					Get-AllWebhooksDefinedInConfigurationFile
 
                 }
-                start-sleep -seconds 20        
+                dir env:  
+                $(dir env:Path).Value
                 SetConfiguration   
                   
                 ''')
