@@ -32,11 +32,17 @@ pipeline {
 					Get-AllWebhooksDefinedInConfigurationFile
 
                 }
-                dir env:  
-                $(dir env:Path).Value
                 $env:Path = 'C:\\Program Files\\GitHub CLI\\;;' + $env:Path
                 $token=get-masterconfiguration GithubCLI
                 $env:GITHUB_TOKEN = $token
+                echo $env:GITHUB_TOKEN
+
+                $config = GetConfiguration -FileName "Configuration.json"
+                foreach ($repository in $config) {
+                    Write-Output $repository.RepositoryName;
+                    # Write-Output $repository.WebHooks
+                }
+
                 SetConfiguration  
                   
                 ''')
