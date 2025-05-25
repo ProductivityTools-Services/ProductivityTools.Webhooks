@@ -33,8 +33,9 @@ pipeline {
 					Get-AllWebhooksDefinedInConfigurationFile
 
                 }
+                start-sleeep -seconds 20        
                 SetConfiguration   
-                start-sleeep -seconds 20          
+                  
                 ''')
             }
         }
