@@ -20,5 +20,4 @@ Get-WebhooksUrls ProductivityTools-Transfers/ProductivityTools.Transfers.Api
 Get-WebhooksUrls ProductivityTools-Salaries/ProductivityTools.Salaries.Api
 Get-AllWebhooksDefinedInConfigurationFile
 Set-WebhooksAsInConfigurationFile
-
 ```

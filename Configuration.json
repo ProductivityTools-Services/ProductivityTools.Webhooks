@@ -1,14 +1,20 @@
 [
+	{
+        "RepositoryName": "Home-Repositories/Home.Configuration",
+        "Webhooks": [
+			"http://jenkinswebhook.productivitytools.top:8081/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
+        ]
+    },
     {
         "RepositoryName": "ProductivityTools-Transfers/ProductivityTools.Transfers.Api",
         "Webhooks": [
-            "http://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
+            "https://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
         ]
     },
-	    {
+	{
         "RepositoryName": "ProductivityTools-Salaries/ProductivityTools.Salaries.Api",
         "Webhooks": [
-            "http://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
+            "https://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
         ]
     }
 ]
