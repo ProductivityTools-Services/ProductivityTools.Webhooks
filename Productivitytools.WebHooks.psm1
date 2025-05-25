@@ -58,8 +58,11 @@ function AddWebhook{
 
     #$hooksUrl="repos/ProductivityTools-Transfers/ProductivityTools.Transfers.Api/hooks"
     $hooksUrl="repos/$repositoryName/hooks"
-    $jsonPayload='{\"name\":\"web\",\"active\":true,\"events\":[\"push\",\"pull_request\",\"release\"],\"config\":{\"url\":\"'+$webHookUrl+'\",\"content_type\":\"form",\"insecure_ssl\":\"0\"}}'
+    $jsonPayload='{"name":"web","active":true,"events":["push","pull_request","release"],"config":{"url":"'+$webHookUrl+'","content_type":"form","insecure_ssl":"0"}}'
     #echo $jsonPayload
+    #$jsonPayload="{\`"name\`":\`"web\`",\`"active\`":true,\`"events\`":[\`"push\`",\`"pull_request\`",\`"release\`"],\`"config\`":{\`"url\`":\`""+$webHookUrl+"\`",\`"content_type\`":\`"form\`",\`"insecure_ssl\`":\`"0\`"}}"
+    $jsonPayload="{`"name`":`"web`",`"active`":true,`"events`":[`"push`",`"pull_request`",`"release`"],`"config`":{`"url`":`""+$webHookUrl+"`",`"content_type`":`"form`",`"insecure_ssl`":`"0`"}}"
+
     Write-Host $jsonPayload
     $x=$(echo $jsonPayload | gh api $hooksUrl  --input - -X POST)
     Write-Output "Webhook $hooksUrl added"
