@@ -46,11 +46,11 @@ pipeline {
 
                 $config = GetConfiguration -FileName "Configuration.json"
                 foreach ($repository in $config) {
-                    Write-Output $repository.RepositoryName;
+                    Write-Host $repository.RepositoryName;
                     # Write-Output $repository.WebHooks
                 }
 
-                SetConfiguration  
+                #SetConfiguration  
                   
                 ''')
             }
