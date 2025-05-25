@@ -32,6 +32,13 @@ pipeline {
 					Get-AllWebhooksDefinedInConfigurationFile
 
                 }
+                function GetConfiguration {
+                    param(
+                        [string]$FileName
+                    )
+                    $config = Get-Content $FileName | ConvertFrom-Json
+                    return $config
+                }
                 $env:Path = 'C:\\Program Files\\GitHub CLI\\;;' + $env:Path
                 $token=get-masterconfiguration GithubCLI
                 $env:GITHUB_TOKEN = $token
