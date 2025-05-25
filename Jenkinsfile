@@ -36,7 +36,8 @@ pipeline {
                 $(dir env:Path).Value
                 $env:Path = 'C:\\Program Files\\GitHub CLI\\;;' + $env:Path
                 gh auth token
-                get-masterconfiguration 
+                $token=get-masterconfiguration GithubCLI
+                $env:GITHUB_TOKEN = $token
                 SetConfiguration  
                   
                 ''')
