@@ -21,3 +21,11 @@ Get-WebhooksUrls ProductivityTools-Salaries/ProductivityTools.Salaries.Api
 Get-AllWebhooksDefinedInConfigurationFile
 Set-WebhooksAsInConfigurationFile
 ```
+
+## Jenkins
+
+To run jenkins job couple steps are required
+- download and install gh cli
+- authorize to gh cli
+- get the github cli key ```gh auth token```
+- paste it to the master configuration
