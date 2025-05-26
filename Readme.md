@@ -29,3 +29,6 @@ To run jenkins job couple steps are required
 - authorize to gh cli
 - get the github cli key ```gh auth token```
 - paste it to the master configuration
+
+
+Jenkins currently is not working due to 400 error during sending json.
