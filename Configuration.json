@@ -2,7 +2,7 @@
 	{
         "RepositoryName": "Home-Repositories/Home.Configuration",
         "Webhooks": [
-			"http://jenkinswebhook.productivitytools.top:8081/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
+			"http://jenkinswebhook.productivitytools.top:8081/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
         ]
     },
     {
@@ -17,10 +17,16 @@
             "https://jenkins-m710q.productivitytools.top/github-webhook/","http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
         ]
     },
-    	{
+    {
         "RepositoryName": "ProductivityTools-Transfers/ProductivityTools.Transfers.Api",
         "Webhooks": [
             "http://jenkinswebhook.productivitytools.top:8082/github-webhook/","http://jenkinswebhook.productivitytools.top:8081/github-webhook/"
+        ]
+    },
+    {
+        "RepositoryName": "ProductivityTools-Journal/ProductivityTools.Journal.Api",
+        "Webhooks": [
+            "https://jenkins-m710q.productivitytools.top/github-webhook/"
         ]
     }
 ]
