@@ -28,5 +28,11 @@
         "Webhooks": [
             "http://jenkinswebhook.productivitytools.top:8082/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
         ]
+    },
+    {
+        "RepositoryName": "ProductivityTools-Tasks3/ProductivityTools.GetTask3.Server",
+        "Webhooks": [
+                "https://jenkins-m710q.productivitytools.top/github-webhook/"
+        ]
     }
 ]
