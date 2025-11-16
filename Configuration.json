@@ -46,6 +46,12 @@
         "Webhooks": [
                "https://jenkins-ubuntu.productivitytools.top/github-webhook/"
         ]
+    },
+    {
+        "RepositoryName": "ProductivityTools-PdfTools/ProductivityTools.PdfTools.Web",
+        "Webhooks": [
+               "https://jenkins-ubuntu.productivitytools.top/github-webhook/"
+        ]
     }
 
 ]
