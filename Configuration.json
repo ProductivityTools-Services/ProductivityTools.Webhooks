@@ -52,6 +52,11 @@
         "Webhooks": [
                "https://jenkins-ubuntu.productivitytools.top/github-webhook/"
         ]
+    },
+    {
+        "RepositoryName": "ProductivityTools-Links/ProductivityTools.Links.Api",
+        "Webhooks": [
+               "https://jenkins-ubuntu.productivitytools.top/github-webhook/"
+        ]
     }
-
 ]
