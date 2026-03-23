@@ -11,6 +11,12 @@
             "http://jenkinswebhook.productivitytools.top:8082/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
         ]
     },
+        {
+        "RepositoryName": "ProductivityTools-Trips/ProductivityTools.Trips.Api",
+        "Webhooks": [
+            "http://jenkinswebhook.productivitytools.top:8082/github-webhook/","https://jenkins-m710q.productivitytools.top/github-webhook/"
+        ]
+    },
 	{
         "RepositoryName": "ProductivityTools-Salaries/ProductivityTools.Salaries.Api",
         "Webhooks": [
@@ -37,6 +43,12 @@
     },
     {
         "RepositoryName": "ProductivityTools-FileSharing/ProductivityTools.FileSharing.Api",
+        "Webhooks": [
+               "http://jenkinswebhook.productivitytools.top:8082/github-webhook/", "https://jenkins-m710q.productivitytools.top/github-webhook/"
+        ]
+    },
+        {
+        "RepositoryName": "ProductivityTools-Expenses/ProductivityTools.Expenses.Api",
         "Webhooks": [
                "http://jenkinswebhook.productivitytools.top:8082/github-webhook/", "https://jenkins-m710q.productivitytools.top/github-webhook/"
         ]
